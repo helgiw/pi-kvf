@@ -1,4 +1,4 @@
-# pi-kvf
+# pi-kvf  
 Stroyming av KVF til RPI
 
 RPI imager (set wifi config, set default brúkaranavn til "user" og okkurt rímuligt password)
@@ -24,12 +24,12 @@ User=user
 WantedBy=multi-user.target  
 
 
-sudo systemctl daemon-reload
-sudo systemctl enable kvf.service
-sudo systemctl restart kvf.service
+sudo systemctl daemon-reload  
+sudo systemctl enable kvf.service  
+sudo systemctl restart kvf.service  
 
-apt install watchdog
-systemctl enable watchdog
+apt install watchdog  
+systemctl enable watchdog  
 
-check watchdog device status:
-wdctl
+check watchdog device status:  
+wdctl  
