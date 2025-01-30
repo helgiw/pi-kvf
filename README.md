@@ -9,19 +9,19 @@ sudo apt install vlc --no-install-recommends
 
 sudo nano /etc/systemd/system/kvf.service
 
-[Unit]
-Description=Start Video Playback at Boot Time
-After=network.target
+[Unit]  
+Description=Start Video Playback at Boot Time  
+After=network.target  
 
-[Service]
-ExecStartPre=/bin/sleep 10 
-ExecStart=cvlc -f --play-and-exit --no-video-title-show rtmp://live.kringvarp.fo/kvf/_definst_/1080.stream --loop 
-Restart=on-failure
-RestartSec=5
-User=user
+[Service]  
+ExecStartPre=/bin/sleep 10   
+ExecStart=cvlc -f --play-and-exit --no-video-title-show rtmp://live.kringvarp.fo/kvf/_definst_/1080.stream --loop   
+Restart=on-failure  
+RestartSec=5  
+User=user  
 
-[Install]
-WantedBy=multi-user.target
+[Install]  
+WantedBy=multi-user.target  
 
 
 sudo systemctl daemon-reload
